@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.header_logo {
+  width: 162px;
+  margin-bottom: 0.4rem;
+}
+
+.button {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  height: 50px;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 25px;
+  color: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.fonctionnement_fig {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: 70px;
+  list-style-type: none;
+  position: relative;
+  width: 100%;
+  background-color: #F3F3F3;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement_fig span {
+  position: absolute;
+  left: -0.5rem;
+  padding: 0.25rem 0;
+  width: 1.7rem;
+  background-color: #9356DC;
+  color: #F3F3F3;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.header {
+  padding-top: 14px;
+}
+.header figure {
+  height: 50px;
+  gap: 1rem;
+  align-items: center;
+  background-color: #EAEAEA;
+}
+
+.hero {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+  background-color: #F3F3F3;
+}
+.hero h1 {
+  text-align: center;
+  width: 70%;
+  margin: 2rem 0 1rem 0;
+  line-height: 1;
+}
+.hero p {
+  text-align: center;
+  width: 80%;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.fonctionnement {
+  padding: 2rem 1rem 4rem 2rem;
+}/*# sourceMappingURL=styles.css.map */
