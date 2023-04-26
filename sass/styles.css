@@ -37,6 +37,10 @@ h3 {
   font-family: "Shrikhand", cursive;
 }
 
+.hidden {
+  display: none;
+}
+
 .header_logo {
   width: 162px;
   margin-bottom: 0.4rem;
@@ -50,6 +54,24 @@ h3 {
   border-radius: 25px;
   color: #FFFFFF;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.button:hover .button_bg {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.button_bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(200.64deg, #9356DC -0.2%, #FF79DA 100.74%);
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  z-index: -1;
+  border-radius: 25px;
 }
 
 .fonctionnement_fig {
@@ -95,6 +117,35 @@ h3 {
 }
 .restaurants_details i {
   font-size: 1.5rem;
+}
+
+.restaurant_heart {
+  position: relative;
+  height: 24px;
+}
+.restaurant_heart--empty {
+  opacity: 1;
+  opacity-transition: opacity 500ms ease-in-out;
+}
+.restaurant_heart:hover .restaurant_heart--empty {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+.restaurant_heart:hover .restaurant_heart--filled {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.restaurant_heart--filled {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
 }
 
 .header {

@@ -17,7 +17,7 @@
     <body>
         <header class="header">
             <div class="flex">
-                <a href="#" class="btn_back"></a> <!--Button to go back only visilbe when in menus-->
+                <a href="#" class="btn_back hidden"></a> <!--Button to go back only visilbe when in menus-->
                 <a href="#">
                     <img class="header_logo" src="./assets/images/logo/ohmyfood@2x.svg" alt="">
                 </a> <!--logo : Bring whole svg code for animation-->
@@ -33,7 +33,10 @@
             <section class="hero flex">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exeption, séléctionnés par nos soins.</p>
-                <button class="button">Explorer nos restaurants</button>
+                <button class="button">
+                    Explorer nos restaurants
+                    <div class="button_bg"></div>
+                </button>
             </section>
             <section class="fonctionnement">
                 <h2>Fonctionnement</h2>
@@ -74,7 +77,10 @@
                                     <h3>La palette du goût</h3>
                                     <p>Ménilmontant</p>
                                 </div>
-                                <i class="fa-regular fa-heart"></i>
+                                <div class="restaurant_heart">
+                                    <i class="fa-regular fa-heart restaurant_heart--empty"></i>
+                                    <i class="fa-solid fa-heart restaurant_heart--filled"></i>
+                                </div>
                             </div>
                         </a>
                     </article>
@@ -86,7 +92,10 @@
                                     <h3>La note enchantée</h3>
                                     <p>Charonne</p>
                                 </div>
-                                <i class="fa-regular fa-heart"></i>
+                                <div class="restaurant_heart">
+                                    <i class="fa-regular fa-heart restaurant_heart--empty"></i>
+                                    <i class="fa-solid fa-heart restaurant_heart--filled"></i>
+                                </div>
                             </div>
                         </a>
                     </article>
@@ -98,7 +107,10 @@
                                     <h3>À la française</h3>
                                     <p>Cité Rouge</p>
                                 </div>
-                                <i class="fa-regular fa-heart"></i>
+                                <div class="restaurant_heart">
+                                    <i class="fa-regular fa-heart restaurant_heart--empty"></i>
+                                    <i class="fa-solid fa-heart restaurant_heart--filled"></i>
+                                </div>
                             </div>
                         </a>
                     </article>
@@ -110,7 +122,10 @@
                                     <h3>Le délice des sens</h3>
                                     <p>Folie-Médicourt</p>
                                 </div>
-                                <i class="fa-regular fa-heart"></i>
+                                <div class="restaurant_heart">
+                                    <i class="fa-regular fa-heart restaurant_heart--empty"></i>
+                                    <i class="fa-solid fa-heart restaurant_heart--filled"></i>
+                                </div>
                             </div>
                         </a>
                     </article>
