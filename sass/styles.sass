@@ -8,6 +8,23 @@
 @import "./composants/fonctionnementFig"
 @import "./composants/restaurants_card"
 @import "./composants/restaurants_heart"
+.restaurant
+    &_item
+        height: 70px
+        width: 100%
+        background-color: white
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1)
+        border-radius: 1rem
+        padding: 0.7rem
+        align-items: end
+        .pop-out
+            width: 59px
+            height: 70px
+            background-color: $color_2
+    h3
+        margin-bottom: 0.3rem
+    p
+        white-space: nowrap
 
 
 //layout
@@ -16,12 +33,33 @@
 @import "./layout/fonctionnement"
 @import "./layout/restaurants"
 @import "./layout/footer"
-
+.restaurant
+    padding-top: 14rem
+    section
+        background-color: $color_1
+        border-top-left-radius: 2rem
+        border-top-right-radius: 2rem
+        padding: 2rem 1rem
+    h1
+        font-size: 1.75rem
+    h2
+        text-transform: uppercase
+        font-weight: 300
+        font-size: 1rem
+        margin: 2rem 0 0.3rem
+    &_header
+        align-items: center
+        i
+            font-size: 22px
+    
+        
 
 @import "./layout/responsive"
-
-
-
-
-
 //pages
+.restaurant
+
+
+    &_palette
+        background: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat
+        background-size: auto 275px
+        background-position: top
