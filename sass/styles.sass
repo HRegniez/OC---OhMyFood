@@ -17,7 +17,10 @@
         box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1)
         overflow-x: hidden
         position: relative
-        margin-bottom: 0.7rem
+        margin: 0 auto 0.7rem
+        cursor: pointer
+        p
+            font-size: 0.9rem
         i
             color: white
             font-size: 22px
@@ -28,16 +31,16 @@
             padding: 0.7rem
             width: 100%
         span
-                position: absolute
-                bottom: 0.7rem
-                right: 1rem
-                transform: translateX(0px)
-                transition: all 500ms ease-out
+            position: absolute
+            bottom: 0.7rem
+            right: 1rem
+            transform: translateX(0px)
+            transition: all 500ms ease-out
         &:hover
             .pop-out
                 transform: translateX(0px)
             span
-                transform: translateX(-60px)
+                transform: translateX(-40px)
             i
                 opacity: 1
                 transform: rotate(0deg)      
@@ -60,7 +63,16 @@
 @import "./layout/footer"
 .restaurant
     position: relative
-    padding-top: calc(2rem + 40vw )
+    padding-top: calc(2rem + 30vw )
+    &--wrap 
+        max-width: 40rem
+        margin: 0 auto
+    &_header
+        align-items: center
+        gap: 1rem
+        i
+            font-size: 22px
+
     section
         background-color: $color_1
         border-top-left-radius: 2rem
@@ -70,16 +82,17 @@
         max-width: 1055px
     h1
         font-size: 1.75rem
-        margin-top: 2rem
+        margin-top: 1rem
+        margin-bottom: 1rem
     h2
         text-transform: uppercase
         font-weight: 300
         font-size: 1rem
         margin: 2rem 0 0.3rem
-    &_header
-        align-items: center
-        i
-            font-size: 22px
+    .button 
+        display: block
+        margin: 2rem auto 0
+    
     
         
 
@@ -88,14 +101,18 @@
 .restaurant
     &_palette
         background: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat 
-        background-size: 100% 
-        background-position: top
+        background-size: 100% auto
+        background-position: 50% -15vw
         z-index: -2
-
 .white_bg
     position: absolute
     height: 100vh
     width: 100vw
     background-color: white
-    top: calc(4rem + 45vw )
+    top: calc(4rem + 30vw )
     z-index: -1
+
+.btn_back
+    position: absolute
+    top: 1rem
+    left: 1rem
