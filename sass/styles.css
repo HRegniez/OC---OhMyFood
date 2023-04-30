@@ -141,6 +141,7 @@ h3 {
 .restaurant_heart {
   position: relative;
   height: 24px;
+  cursor: pointer;
 }
 .restaurant_heart--empty {
   opacity: 1;
@@ -177,9 +178,23 @@ h3 {
   position: relative;
   margin: 0 auto 0.7rem;
   cursor: pointer;
+  min-width: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.restaurant_item h3 {
+  min-width: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .restaurant_item p {
   font-size: 0.9rem;
+  min-width: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .restaurant_item i {
   color: white;
@@ -191,6 +206,7 @@ h3 {
 .restaurant_item_details {
   padding: 0.7rem;
   width: 100%;
+  transition: all 400ms;
 }
 .restaurant_item span {
   position: absolute;
@@ -199,11 +215,14 @@ h3 {
   transform: translateX(0px);
   transition: all 500ms ease-out;
 }
+.restaurant_item:hover .restaurant_item_details {
+  width: 70%;
+}
 .restaurant_item:hover .pop-out {
   transform: translateX(0px);
 }
 .restaurant_item:hover span {
-  transform: translateX(-40px);
+  transform: translateX(-50px);
 }
 .restaurant_item:hover i {
   opacity: 1;
@@ -217,6 +236,10 @@ h3 {
   align-items: center;
   transform: translateX(60px);
   transition: all 600ms ease-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .header {
@@ -363,6 +386,12 @@ h3 {
 }
 .restaurant_palette {
   background: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: 50% -15vw;
+  z-index: -2;
+}
+.restaurant_delice {
+  background: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") no-repeat;
   background-size: 100% auto;
   background-position: 50% -15vw;
   z-index: -2;
