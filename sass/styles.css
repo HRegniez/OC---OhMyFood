@@ -575,4 +575,33 @@ h3 {
     opacity: 1;
     transform: scales(1, 1) translateX(0);
   }
+}
+.header_main_logo {
+  animation: header_anim 4000ms;
+  animation-fill-mode: forwards;
+}
+.header figure {
+  opacity: 0;
+  animation: opacity_anim 4000ms 2000ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes header_anim {
+  0% {
+    transform: scale(3.5) translateY(300%);
+  }
+  100% {
+    transform: scale(1) translateY(1);
+  }
+}
+@keyframes opacity_anim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=styles.css.map */
