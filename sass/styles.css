@@ -124,15 +124,15 @@ h3 {
 }
 
 .fonctionnement_fig:nth-child(1) {
-  animation-delay: 1600ms;
+  animation-delay: 4550ms;
 }
 
 .fonctionnement_fig:nth-child(2) {
-  animation-delay: 1900ms;
+  animation-delay: 4800ms;
 }
 
 .fonctionnement_fig:nth-child(3) {
-  animation-delay: 2200ms;
+  animation-delay: 5050ms;
 }
 
 @keyframes fonctionnement_anim {
@@ -153,7 +153,7 @@ h3 {
   background-color: white;
   border-radius: 1rem;
   opacity: 0;
-  animation: hero_anim 500ms forwards;
+  animation: hero_anim 300ms forwards;
 }
 .restaurants img {
   height: 10rem;
@@ -327,7 +327,7 @@ h3 {
 }
 .fonctionnement h2 {
   opacity: 0;
-  animation: hero_anim 800ms 1200ms;
+  animation: hero_anim 800ms 4200ms;
   animation-fill-mode: forwards;
 }
 .fonctionnement ul {
@@ -342,7 +342,7 @@ h3 {
   padding: 52px 1rem 56px 1rem;
   background-color: #F6F6F6;
   opacity: 0;
-  animation: opacity_anim 500ms 1300ms;
+  animation: opacity_anim 500ms 4300ms;
   animation-fill-mode: forwards;
 }
 .restaurants h2 {
@@ -619,52 +619,100 @@ h3 {
     transform: scales(1, 1) translateX(0);
   }
 }
+.loading_screen {
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  animation: loading_timeout 3100ms;
+  animation-fill-mode: forwards;
+}
+.loading_logo {
+  width: 162px;
+  margin: auto;
+  transform: scale(3.5) translateY(260%);
+}
+.loading_logo--O-1 {
+  transform: translateX(50px);
+  animation: jump-1 300ms 200ms, jump-1 300ms 1000ms, jump-1 300ms 1600ms, reposition-1 400ms 2000ms forwards;
+}
+.loading_logo--H {
+  opacity: 0;
+  animation: opacity_anim 150ms 2400ms forwards;
+}
+.loading_logo--M {
+  opacity: 0;
+  animation: opacity_anim 150ms 2500ms forwards;
+}
+.loading_logo--Y {
+  opacity: 0;
+  animation: opacity_anim 150ms 2600ms forwards;
+}
+.loading_logo--F {
+  opacity: 0;
+  animation: opacity_anim 150ms 2700ms forwards;
+}
+.loading_logo--O-2 {
+  transform: translateX(-45px);
+  animation: jump-2 300ms 300ms, jump-2 300ms 1100ms, jump-2 300ms 1700ms, reposition-2 400ms 2000ms forwards;
+}
+.loading_logo--O-3 {
+  transform: translateX(-40px);
+  animation: jump-3 300ms 450ms, jump-3 300ms 1300ms, jump-3 300ms 1800ms, reposition-3 400ms 2000ms forwards;
+}
+.loading_logo--D {
+  opacity: 0;
+  animation: opacity_anim 150ms 2900ms forwards;
+}
+
 .header_main_logo {
-  animation: header_anim 1500ms;
+  opacity: 0;
+  animation: header_anim 1500ms 3000ms;
   animation-fill-mode: forwards;
 }
 .header figure {
   opacity: 0;
-  animation: opacity_anim 400ms 1100ms;
+  animation: opacity_anim 400ms 4100ms;
   animation-fill-mode: forwards;
 }
 
 .hero {
   opacity: 0;
-  animation: hero_anim 800ms 1000ms;
+  animation: hero_anim 800ms 4000ms;
   animation-fill-mode: forwards;
 }
 
 .restaurants_card:nth-child(1) {
-  animation-delay: 1900ms;
+  animation-delay: 4700ms;
 }
 
 .restaurants_card:nth-child(2) {
-  animation-delay: 2400ms;
+  animation-delay: 5000ms;
 }
 
 .restaurants_card:nth-child(3) {
-  animation-delay: 2900ms;
+  animation-delay: 5300ms;
 }
 
 .restaurants_card:nth-child(4) {
-  animation-delay: 3400ms;
+  animation-delay: 5600ms;
 }
 
 @keyframes header_anim {
   0% {
     transform: scale(3.5) translateY(300%);
+    opacity: 1;
   }
   100% {
     transform: scale(1) translateY(1);
+    opacity: 1;
   }
 }
 @keyframes opacity_anim {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: 0.3;
   }
   100% {
     opacity: 1;
@@ -681,5 +729,93 @@ h3 {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@keyframes loading_timeout {
+  0% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2000px);
+    opacity: 0;
+  }
+}
+@keyframes jump-1 {
+  0% {
+    transform: translate(50px, 0);
+  }
+  50% {
+    transform: translate(50px, -10px);
+  }
+  100% {
+    transform: translate(50px, 0);
+  }
+}
+@keyframes jump-2 {
+  0% {
+    transform: translate(-45px, 0);
+  }
+  50% {
+    transform: translate(-45px, -10px);
+  }
+  100% {
+    transform: translate(-45px, 0);
+  }
+}
+@keyframes jump-3 {
+  0% {
+    transform: translate(-40px, 0);
+  }
+  50% {
+    transform: translate(-40px, -10px);
+  }
+  100% {
+    transform: translate(-40px, 0);
+  }
+}
+@keyframes reposition-1 {
+  0% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes reposition-2 {
+  0% {
+    transform: translateX(-45px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes reposition-3 {
+  0% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@media screen and (max-width: 600px) {
+  @keyframes header_anim {
+    0% {
+      transform: scale(1.5) translateY(600%);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1) translateY(1);
+      opacity: 1;
+    }
+  }
+  .loading_logo {
+    transform: scale(1.5) translateY(520%);
   }
 }/*# sourceMappingURL=styles.css.map */
