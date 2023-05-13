@@ -26,13 +26,21 @@
 .header
     &_main
         &_logo
-            
-            animation: header_anim 4000ms
+            animation: header_anim 1500ms 
             animation-fill-mode: forwards
     figure
         opacity: 0
-        animation: opacity_anim 4000ms 2000ms
+        animation: opacity_anim 400ms 1100ms
         animation-fill-mode: forwards
+
+.hero
+    opacity: 0
+    animation: hero_anim 800ms 1000ms
+    animation-fill-mode: forwards
+
+@for $x from 1 through 4
+    .restaurants_card:nth-child(#{$x})
+        animation-delay: calc( (500ms * $x) + 1400ms )
 
 
 @keyframes header_anim 
@@ -48,5 +56,14 @@
         opacity: 0.3
     100%
         opacity: 1
+@keyframes hero_anim
+    0%
+        opacity: 0
+        transform: translateX(100%)
+    50%
+        opacity: 0.3
+    100%
+        opacity: 1
+        transform: translateX(0)
 
- 
+

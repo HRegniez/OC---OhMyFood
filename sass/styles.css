@@ -95,6 +95,7 @@ h3 {
 }
 
 .fonctionnement_fig {
+  opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,6 +108,9 @@ h3 {
   background-color: #F6F6F6;
   border-radius: 1rem;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  animation-duration: 400ms;
+  animation-name: fonctionnement_anim;
+  animation-fill-mode: forwards;
 }
 .fonctionnement_fig span {
   position: absolute;
@@ -119,9 +123,37 @@ h3 {
   border-radius: 50%;
 }
 
+.fonctionnement_fig:nth-child(1) {
+  animation-delay: 1600ms;
+}
+
+.fonctionnement_fig:nth-child(2) {
+  animation-delay: 1900ms;
+}
+
+.fonctionnement_fig:nth-child(3) {
+  animation-delay: 2200ms;
+}
+
+@keyframes fonctionnement_anim {
+  0% {
+    opacity: 0;
+    transform: scale(2, 0.5) translateY(-300vw);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(0.7, 1.3) translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: scales(1, 1) translateY(0);
+  }
+}
 .restaurants_card {
   background-color: white;
   border-radius: 1rem;
+  opacity: 0;
+  animation: hero_anim 500ms forwards;
 }
 .restaurants img {
   height: 10rem;
@@ -293,6 +325,11 @@ h3 {
 .fonctionnement {
   padding: 3rem 1rem 4rem 2rem;
 }
+.fonctionnement h2 {
+  opacity: 0;
+  animation: hero_anim 800ms 1200ms;
+  animation-fill-mode: forwards;
+}
 .fonctionnement ul {
   margin-top: 2rem;
   display: flex;
@@ -304,8 +341,14 @@ h3 {
 .restaurants {
   padding: 52px 1rem 56px 1rem;
   background-color: #F6F6F6;
+  opacity: 0;
+  animation: opacity_anim 500ms 1300ms;
+  animation-fill-mode: forwards;
 }
 .restaurants h2 {
+  opacity: 0;
+  animation: hero_anim 800ms 1200ms;
+  animation-fill-mode: forwards;
   margin-bottom: 1.5rem;
 }
 .restaurants nav {
@@ -577,13 +620,35 @@ h3 {
   }
 }
 .header_main_logo {
-  animation: header_anim 4000ms;
+  animation: header_anim 1500ms;
   animation-fill-mode: forwards;
 }
 .header figure {
   opacity: 0;
-  animation: opacity_anim 4000ms 2000ms;
+  animation: opacity_anim 400ms 1100ms;
   animation-fill-mode: forwards;
+}
+
+.hero {
+  opacity: 0;
+  animation: hero_anim 800ms 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.restaurants_card:nth-child(1) {
+  animation-delay: 1900ms;
+}
+
+.restaurants_card:nth-child(2) {
+  animation-delay: 2400ms;
+}
+
+.restaurants_card:nth-child(3) {
+  animation-delay: 2900ms;
+}
+
+.restaurants_card:nth-child(4) {
+  animation-delay: 3400ms;
 }
 
 @keyframes header_anim {
@@ -603,5 +668,18 @@ h3 {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes hero_anim {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }/*# sourceMappingURL=styles.css.map */
