@@ -28,3 +28,7 @@
         border-radius: 2px
         padding: 0.5rem 0.7rem
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
+
+@for $x from 1 through 4
+    .restaurants_card:nth-child(#{$x})
+        animation-delay: calc( (300ms * $x) + 4400ms )
