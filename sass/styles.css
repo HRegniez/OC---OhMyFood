@@ -436,6 +436,9 @@ h3 {
   background-color: #353535;
   color: white;
   padding: 1.5rem;
+  opacity: 0;
+  animation: opacity_anim 400ms 4100ms;
+  animation-fill-mode: forwards;
 }
 .footer_title {
   font-size: 18px;
