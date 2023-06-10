@@ -11,8 +11,17 @@
         cursor: pointer
         min-width: 0
         text-overflow: ellipsis
-        overflow: hidden
         white-space: nowrap
+        &:hover
+            .restaurant_item_details
+                width: 70%
+            .pop-out
+                transform: translateX(0px)
+            span
+                transform: translateX(-50px)
+            i
+                opacity: 1
+                transform: rotate(0deg)      
         h3
             min-width: 0
             text-overflow: ellipsis
@@ -40,17 +49,7 @@
             bottom: 0.7rem
             right: 1rem
             transform: translateX(0px)
-            transition: all 500ms ease-out
-        &:hover
-            .restaurant_item_details
-                width: 70%
-            .pop-out
-                transform: translateX(0px)
-            span
-                transform: translateX(-50px)
-            i
-                opacity: 1
-                transform: rotate(0deg)      
+            transition: all 500ms ease-out    
     .pop-out
         width: 60px
         background-color: $color_2
